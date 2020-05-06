@@ -1,7 +1,6 @@
 # Restyle
 
 React primitive UI components built with [Styled System][].
-https://rebassjs.org
 
 [![Build Status][badge]][travis]
 [![Coverage][coverage-badge]][coverage]
