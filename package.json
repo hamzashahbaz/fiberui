@@ -7,10 +7,7 @@
 		"email": "contact@hamzashahbaz.me",
 		"url": "https://hamzashahbaz.me"
 	},
-	"description": "CSS framework for faster and easier user interface development.",
-	"main": "index.sass",
-	"unpkg": "css/fiber.css",
-	"style": "css/fiber.min.css",
+	"description": "React component library for faster and easier user interface development.",
 	"repository": {
 		"type": "git",
 		"url": "git+https://github.com/fiberui/react.git"

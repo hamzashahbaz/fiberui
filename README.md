@@ -1,6 +1,20 @@
-# Fiber UI - React Component Library
+<p align="center">
+  <a href="https://fiberui.com">
+    <img src="./logo.svg" alt="Fiber UI logo" width="72" height="72">
+  </a>
+</p>
 
-React primitive UI components built with [Styled System][].
+<h3 align="center">Fiber UI - React Component Library</h3>
+<p align="center">React Component Library built with [Styled System][] for faster and easier user interface development.</p>
+<br>
+<p align="center">
+  <a href="https://fiberui.com"><strong>Explore Fiber UI docs »</strong></a>
+  <br>
+  <br>
+  <a href="https://github.com/fiberui/css/issues/new?template=bug.md">Report bug</a>
+  ·
+  <a href="https://github.com/fiberui/css/issues/new?template=feature.md&labels=feature">Request feature</a>
+</p>
 
 [![Build Status][badge]][travis]
 [![Coverage][coverage-badge]][coverage]
