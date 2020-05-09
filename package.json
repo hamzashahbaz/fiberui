@@ -1,0 +1,52 @@
+{
+	"name": "fiberui-react",
+	"version": "0.0.1",
+	"homepage": "https://fiberui.com",
+	"author": {
+		"name": "Hamza Shahbaz",
+		"email": "contact@hamzashahbaz.me",
+		"url": "https://hamzashahbaz.me"
+	},
+	"description": "CSS framework for faster and easier user interface development.",
+	"main": "index.sass",
+	"unpkg": "css/fiber.css",
+	"style": "css/fiber.min.css",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/fiberui/react.git"
+	},
+	"license": "MIT",
+	"keywords": [
+		"css",
+		"sass",
+		"flexbox",
+		"responsive",
+		"framework"
+	],
+	"bugs": {
+		"url": "https://github.com/fiberui/react/issues"
+	},
+	"devDependencies": {
+		"autoprefixer": "^9.7.6",
+		"clean-css-cli": "^4.3.0",
+		"node-sass": "^4.13.1",
+		"postcss-cli": "^7.1.0",
+		"rimraf": "^3.0.2"
+	},
+	"scripts": {
+		"build": "npm run build-clean && npm run build-sass && npm run build-autoprefix && npm run build-cleancss",
+		"build-autoprefix": "postcss --use autoprefixer --map false --output css/fiber.css css/fiber.css",
+		"build-cleancss": "cleancss -o css/fiber.min.css css/fiber.css",
+		"build-clean": "rimraf css",
+		"build-sass": "node-sass --output-style expanded --source-map true index.scss css/fiber.css",
+		"deploy": "npm run build",
+		"start": "npm run build-sass -- --watch"
+	},
+	"files": [
+		"css",
+		"sass",
+		"index.sass",
+		"LICENSE",
+		"README.md"
+	]
+}

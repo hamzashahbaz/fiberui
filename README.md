@@ -1,4 +1,4 @@
-# Restyle
+# Fiber UI - React Component Library
 
 React primitive UI components built with [Styled System][].
 
@@ -12,7 +12,6 @@ React primitive UI components built with [Styled System][].
 [travis]: https://travis-ci.org/rebassjs/rebass
 [coverage-badge]: https://flat.badgen.net/codecov/c/github/rebassjs/rebass
 [coverage]: https://codecov.io/github/rebassjs/rebass
-
 [downloads-badge]: https://flat.badgen.net/npm/dw/rebass
 [version-badge]: https://flat.badgen.net/npm/v/rebass
 [license-badge]: https://flat.badgen.net/badge/license/MIT/blue
@@ -25,39 +24,40 @@ npm i restyle
 ## Getting Started
 
 ```jsx
-import React from 'react'
-import { Box, Heading, Button } from 'restyle'
+import React from 'react';
+import { Box, Heading, Button } from 'restyle';
 
-export default props =>
-  <Box>
-    <Heading>Hello</Heading>
-    <Button>Rebass</Button>
-  </Box>
+export default (props) => (
+	<Box>
+		<Heading>Hello</Heading>
+		<Button>Rebass</Button>
+	</Box>
+);
 ```
+
 ## Features
 
-- Start your design system without boiling the ocean
-- Build consistent UI with design constraints and user-defined scales
-- Best-in-class developer ergonomics with [Styled System][] props
-- First-class support for theming &
-  fully compatible with [Theme UI][]
-- Quick, mobile-first responsive styles with array-based syntax
-- Flexbox layout with the Box and Flex components
-- Flexibility built in for high design & development velocity
-- Minimal footprint at about 4KB
-
+-   Start your design system without boiling the ocean
+-   Build consistent UI with design constraints and user-defined scales
+-   Best-in-class developer ergonomics with [Styled System][] props
+-   First-class support for theming &
+    fully compatible with [Theme UI][]
+-   Quick, mobile-first responsive styles with array-based syntax
+-   Flexbox layout with the Box and Flex components
+-   Flexibility built in for high design & development velocity
+-   Minimal footprint at about 4KB
 
 ## Principles
 
 Restyle is intended to be:
 
-- **Minimal**
-- **Useful**
-- **Unopinionated**
-- **Flexible**
-- **Consistent**
-- **Extensible**
-- **Themeable**
+-   **Minimal**
+-   **Useful**
+-   **Unopinionated**
+-   **Flexible**
+-   **Consistent**
+-   **Extensible**
+-   **Themeable**
 
 > Do one thing, and do it well
 >
@@ -68,31 +68,30 @@ for more on some of the thought behind Restyle.
 
 ## Documentation
 
-- [Docs](https://rebassjs.org)
-- [Getting Started](https://rebassjs.org/getting-started)
-- [Props](https://rebassjs.org/props)
-- [Extending](https://rebassjs.org/extending)
-- [Theming](https://rebassjs.org/theming)
-- [Reflexbox](https://rebassjs.org/reflexbox)
-- [Text](https://rebassjs.org/Text)
-- [Heading](https://rebassjs.org/Heading)
-- [Button](https://rebassjs.org/Button)
-- [Link](https://rebassjs.org/Link)
-- [Image](https://rebassjs.org/Image)
-- [Card](https://rebassjs.org/Card)
+-   [Docs](https://rebassjs.org)
+-   [Getting Started](https://rebassjs.org/getting-started)
+-   [Props](https://rebassjs.org/props)
+-   [Extending](https://rebassjs.org/extending)
+-   [Theming](https://rebassjs.org/theming)
+-   [Reflexbox](https://rebassjs.org/reflexbox)
+-   [Text](https://rebassjs.org/Text)
+-   [Heading](https://rebassjs.org/Heading)
+-   [Button](https://rebassjs.org/Button)
+-   [Link](https://rebassjs.org/Link)
+-   [Image](https://rebassjs.org/Image)
+-   [Card](https://rebassjs.org/Card)
 
 ## CodeSandbox
 
 Try it out:
 https://codesandbox.io/s/github/rebassjs/rebass/tree/master/examples/sandbox
 
-
 ### Related
 
-- [Styled System][]
-- [Theme UI][]
-- [Emotion][]
-- [Styled Components][]
+-   [Styled System][]
+-   [Theme UI][]
+-   [Emotion][]
+-   [Styled Components][]
 
 [styled system]: https://styled-system.com
 [styled components]: https://github.com/styled-components/styled-components
@@ -105,9 +104,9 @@ See the [Migration Guide](https://rebassjs.org/migrating/).
 
 #### Previous Versions
 
-- [v3.2.2](https://github.com/rebassjs/rebass/tree/v3.2.2) – [v3 Docs](https://rebass-v3.now.sh)
-- [v2.3.2](https://github.com/rebassjs/rebass/tree/v2) – [Docs for Rebass v2](https://rebass-v2.now.sh)
-- [v1.0.7](https://github.com/rebassjs/rebass/tree/v1.0.7)
+-   [v3.2.2](https://github.com/rebassjs/rebass/tree/v3.2.2) – [v3 Docs](https://rebass-v3.now.sh)
+-   [v2.3.2](https://github.com/rebassjs/rebass/tree/v2) – [Docs for Rebass v2](https://rebass-v2.now.sh)
+-   [v1.0.7](https://github.com/rebassjs/rebass/tree/v1.0.7)
 
 ---
 
