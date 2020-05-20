@@ -32,20 +32,22 @@
 [npm]: https://npmjs.com/package/fiberui-react
 
 ```sh
-npm i restyle
+npm i @fiber/core
 ```
 
 ## Getting Started
 
 ```jsx
 import React from 'react';
-import { Box, Heading, Button } from 'restyle';
+import FiberProvider, { Box, Heading, Button } from '@fiber/core';
 
 export default (props) => (
-	<Box>
-		<Heading>Hello</Heading>
-		<Button>Rebass</Button>
-	</Box>
+	<FiberProvider>
+		<Box>
+			<Heading>Hello</Heading>
+			<Button>Submit</Button>
+		</Box>
+	</FiberProvider>
 );
 ```
 
@@ -54,8 +56,7 @@ export default (props) => (
 -   Start your design system without boiling the ocean
 -   Build consistent UI with design constraints and user-defined scales
 -   Best-in-class developer ergonomics with [Styled System][] props
--   First-class support for theming &
-    fully compatible with [Theme UI][]
+-   First-class support for theming
 -   Quick, mobile-first responsive styles with array-based syntax
 -   Flexbox layout with the Box and Flex components
 -   Flexibility built in for high design & development velocity
