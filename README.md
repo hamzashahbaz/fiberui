@@ -5,7 +5,7 @@
 </p>
 
 <h3 align="center">Fiber UI - React Component Library</h3>
-<p align="center">React Component Library built with [Styled System][] for faster and easier user interface development.</p>
+<p align="center">React Component Library built with [Styled Components][https://styled-components.com] for faster and easier user interface development.</p>
 <br>
 <p align="center">
   <a href="https://fiberui.com"><strong>Explore Fiber UI docs »</strong></a>
