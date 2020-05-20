@@ -29,7 +29,7 @@
 [downloads-badge]: https://flat.badgen.net/npm/dw/rebass
 [version-badge]: https://flat.badgen.net/npm/v/rebass
 [license-badge]: https://flat.badgen.net/badge/license/MIT/blue
-[npm]: https://npmjs.com/package/rebass
+[npm]: https://npmjs.com/package/fiberui-react
 
 ```sh
 npm i restyle
