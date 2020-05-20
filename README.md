@@ -1,11 +1,11 @@
 <p align="center">
   <a href="https://fiberui.com">
-    <img src="./logo.svg" alt="Fiber UI logo" width="72" height="72">
+    <img src="./logo.svg" alt="Fiber UI logo" width="48" height="48">
   </a>
 </p>
 
-<h3 align="center">Fiber UI - React Component Library</h3>
-<p align="center">React Component Library built with [Styled Components][https://styled-components.com] for faster and easier user interface development.</p>
+<h3 align="center">Fiber</h3>
+<p align="center">React Component Library built with Styled Components for faster and easier user interface development.</p>
 <br>
 <p align="center">
   <a href="https://fiberui.com"><strong>Explore Fiber UI docs »</strong></a>
