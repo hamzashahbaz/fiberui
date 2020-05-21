@@ -1,5 +1,5 @@
 {
-	"name": "fiberui",
+	"name": "styleup-react",
 	"version": "0.0.1",
 	"homepage": "https://fiberui.com",
 	"author": {
@@ -29,6 +29,15 @@
 		"node-sass": "^4.13.1",
 		"postcss-cli": "^7.1.0",
 		"rimraf": "^3.0.2"
+	},
+	"scripts": {
+		"build": "npm run build-clean && npm run build-sass && npm run build-autoprefix && npm run build-cleancss",
+		"build-autoprefix": "postcss --use autoprefixer --map false --output css/fiber.css css/fiber.css",
+		"build-cleancss": "cleancss -o css/fiber.min.css css/fiber.css",
+		"build-clean": "rimraf css",
+		"build-sass": "node-sass --output-style expanded --source-map true index.scss css/fiber.css",
+		"deploy": "npm run build",
+		"start": "npm run build-sass -- --watch"
 	},
 	"files": [
 		"css",
