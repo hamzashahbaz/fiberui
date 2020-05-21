@@ -31,6 +31,11 @@
 [license-badge]: https://flat.badgen.net/badge/license/MIT/blue
 [npm]: https://npmjs.com/package/fiberui-react
 
+## Solutions
+
+-   React
+-   React Native
+
 ```sh
 npm i @fiber/core
 ```
