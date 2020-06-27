@@ -1,133 +1,47 @@
-<p align="center">
-  <a href="https://fiberui.com">
-    <img src="./logo.svg" alt="Fiber UI logo" width="48" height="48">
-  </a>
-</p>
+# Monorepo with Lerna & Yarn Workspaces
 
-<h3 align="center">Fiber</h3>
-<p align="center">React Component Library built with Styled Components for faster and easier user interface development.</p>
-<br>
-<p align="center">
-  <a href="https://fiberui.com"><strong>Explore Fiber UI docs »</strong></a>
-  <br>
-  <br>
-  <a href="https://github.com/fiberui/css/issues/new?template=bug.md">Report bug</a>
-  ·
-  <a href="https://github.com/fiberui/css/issues/new?template=feature.md&labels=feature">Request feature</a>
-</p>
+> A Monorepo with multiple packages and a shared build, test, and release process.
 
-[![Build Status][badge]][travis]
-[![Coverage][coverage-badge]][coverage]
-[![Downloads][downloads-badge]][npm]
-[![Version][version-badge]][npm]
-[![MIT License][license-badge]](LICENSE.md)
+View example ➡️ https://storybook-monorepo.now.sh/
 
-[badge]: https://flat.badgen.net/travis/rebassjs/rebass/master
-[travis]: https://travis-ci.org/rebassjs/rebass
-[coverage-badge]: https://flat.badgen.net/codecov/c/github/rebassjs/rebass
-[coverage]: https://codecov.io/github/rebassjs/rebass
-[downloads-badge]: https://flat.badgen.net/npm/dw/rebass
-[version-badge]: https://flat.badgen.net/npm/v/rebass
-[license-badge]: https://flat.badgen.net/badge/license/MIT/blue
-[npm]: https://npmjs.com/package/fiberui-react
+![image](https://user-images.githubusercontent.com/9113740/71946241-d9f43a00-318e-11ea-80c4-72c483b88325.png)
 
-## Solutions
+-   🐉 [Lerna](https://lernajs.io/)  - The Monorepo manager
+-   📦 [Yarn Workspaces](https://yarnpkg.com/lang/en/docs/workspaces/)  -  Sane multi-package management
+-   🚀 [React](https://reactjs.org/)  -  JavaScript library for user interfaces
+-   💅 [styled-components](https://www.styled-components.com/)  -  CSS in JS elegance
+-   🛠 [Babel](https://babeljs.io/)  -  Compiles next-gen JavaScript
+-   📖 [Storybook](https://storybook.js.org/) - UI Component Environment
+-   🃏 [Jest](https://jestjs.io/)  -  Unit/Snapshot Testing
 
--   React
--   React Native
+## Usage
 
-```sh
-npm i @fiber/core
-```
+-   `yarn dev` - This starts Storybook for viewing all the components locally.
+-   `yarn bootstrap` - This installs all of the packages and links dependent packages together.
+-   `yarn build` - This babelfies all of the packages and creates `/lib` folders for each one.
+-   `yarn test` - Run all linting and unit tests before committing.
+-   `yarn test -o` - Run only the tests that have changed.
+-   `yarn test -u` - Update all of the snapshot tests.
 
-## Getting Started
+## Lerna
 
-```jsx
-import React from 'react';
-import FiberProvider, { Box, Heading, Button } from '@fiber/core';
+-   `lerna changed` - Show which packages have changed.
+-   `lerna diff` - Show specifically what files have cause the packages to change.
 
-export default (props) => (
-	<FiberProvider>
-		<Box>
-			<Heading>Hello</Heading>
-			<Button>Submit</Button>
-		</Box>
-	</FiberProvider>
-);
-```
+## Linking
 
-## Features
+When linking inside of the Monorepo, everything works as expected. If you are trying to consume packages from this Monorepo _in a different application_ locally, using `npm link` or `yarn link` [does not work as expected](https://github.com/yarnpkg/yarn/issues/5538). However, we have a workaround for the time being.
 
--   Start your design system without boiling the ocean
--   Build consistent UI with design constraints and user-defined scales
--   Best-in-class developer ergonomics with [Styled System][] props
--   First-class support for theming
--   Quick, mobile-first responsive styles with array-based syntax
--   Flexbox layout with the Box and Flex components
--   Flexibility built in for high design & development velocity
--   Minimal footprint at about 4KB
+1. Run `yarn build`
+1. Run `yarn dev`
+1. Change the `package.json` of the consumer from `$YOUR_PACKAGE_NAME` (which lives inside the monorepo) to `file:./../monorepo/packages/$YOUR_PACKAGE_NAME`
+1. Run `rm -rf node_modules && yarn` in the consumer
+1. 🎉
 
-## Principles
+## Contributing
 
-Restyle is intended to be:
+All formatting and linting should be taken care of for you using [stylelint](https://github.com/stylelint/stylelint), [ESLint](https://eslint.org/), and [Prettier](https://prettier.io/). You should also consider installing an extension for CSS syntax highlighting.
 
--   **Minimal**
--   **Useful**
--   **Unopinionated**
--   **Flexible**
--   **Consistent**
--   **Extensible**
--   **Themeable**
-
-> Do one thing, and do it well
->
-> – [Unix philosophy](https://en.wikipedia.org/wiki/Unix_philosophy#Do_One_Thing_and_Do_It_Well)
-
-See [Patterns for Style Composition in React](http://jxnblk.com/writing/patterns-for-style-composition-in-react/)
-for more on some of the thought behind Restyle.
-
-## Documentation
-
--   [Docs](https://rebassjs.org)
--   [Getting Started](https://rebassjs.org/getting-started)
--   [Props](https://rebassjs.org/props)
--   [Extending](https://rebassjs.org/extending)
--   [Theming](https://rebassjs.org/theming)
--   [Reflexbox](https://rebassjs.org/reflexbox)
--   [Text](https://rebassjs.org/Text)
--   [Heading](https://rebassjs.org/Heading)
--   [Button](https://rebassjs.org/Button)
--   [Link](https://rebassjs.org/Link)
--   [Image](https://rebassjs.org/Image)
--   [Card](https://rebassjs.org/Card)
-
-## CodeSandbox
-
-Try it out:
-https://codesandbox.io/s/github/rebassjs/rebass/tree/master/examples/sandbox
-
-### Related
-
--   [Styled System][]
--   [Theme UI][]
--   [Emotion][]
--   [Styled Components][]
-
-[styled system]: https://styled-system.com
-[styled components]: https://github.com/styled-components/styled-components
-[emotion]: https://github.com/emotion-js/emotion
-[theme ui]: https://theme-ui.com
-
-### Upgrading from v3
-
-See the [Migration Guide](https://rebassjs.org/migrating/).
-
-#### Previous Versions
-
--   [v3.2.2](https://github.com/rebassjs/rebass/tree/v3.2.2) – [v3 Docs](https://rebass-v3.now.sh)
--   [v2.3.2](https://github.com/rebassjs/rebass/tree/v2) – [Docs for Rebass v2](https://rebass-v2.now.sh)
--   [v1.0.7](https://github.com/rebassjs/rebass/tree/v1.0.7)
-
----
-
-[Contributing](CONTRIBUTING.md) | [MIT License](LICENSE.md)
+-   [vscode-styled-components](https://marketplace.visualstudio.com/items?itemName=jpoissonnier.vscode-styled-components)
+-   [webstorm-styled-components](https://github.com/styled-components/webstorm-styled-components)
+-   [Other IDEs](https://www.styled-components.com/docs/tooling#syntax-highlighting)
