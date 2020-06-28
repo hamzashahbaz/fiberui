@@ -1,7 +1,7 @@
-import App from 'next/app'
-import React from 'react'
-import { createGlobalStyle, ThemeProvider } from 'styled-components'
-import theme from '../utils/theme'
+import App from 'next/app';
+import React from 'react';
+import {createGlobalStyle, ThemeProvider} from 'styled-components';
+import theme from '../utils/theme';
 
 const GlobalStyle = createGlobalStyle`
     @font-face {
@@ -63,26 +63,16 @@ const GlobalStyle = createGlobalStyle`
         padding: 0;
         font-family: 'Inter';
     }
-`
+`;
 
 export default class MyApp extends App {
-  static async getInitialProps ({ Component, ctx }) {
-    let pageProps = {}
-
-    if (Component.getInitialProps) {
-      pageProps = await Component.getInitialProps(ctx)
+    render() {
+        const {Component, pageProps} = this.props;
+        return (
+            <ThemeProvider theme={theme}>
+                <GlobalStyle />
+                <Component {...pageProps} />
+            </ThemeProvider>
+        );
     }
-
-    return { pageProps }
-  }
-
-  render () {
-    const { Component, pageProps } = this.props
-    return (
-        <ThemeProvider theme={theme}>
-            <GlobalStyle/>
-            <Component {...pageProps} />
-        </ThemeProvider>
-    )
-  }
 }
