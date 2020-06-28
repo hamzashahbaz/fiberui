@@ -1,5 +1,5 @@
 {
-    "name": "@fiberui",
+    "name": "fiberui",
     "private": true,
     "workspaces": [
         "packages/*"
