@@ -12,12 +12,12 @@ const Section = styled.section`
     align-items: center;
     justify-content: center;
     padding: 0px 32px;
-    background-color: #1F2443;
+    background-color: #1f2443;
     box-sizing: border-box;
     @media screen and (min-width: 768px) {
-        padding:0px 0px;
+        padding: 0px 0px;
     }
-`
+`;
 const Container = styled.div`
     padding: 0;
     width: 100%;
@@ -30,12 +30,12 @@ const Container = styled.div`
         padding: 0 48px;
         justify-content: space-between;
     }
-`
+`;
 const Logo = styled.img`
     width: 32px;
     height: 32px;
     margin: 0px 0px 0px 0px;
-`
+`;
 const Menu = styled.div`
     width: 24px;
     height: 24px;
@@ -43,15 +43,15 @@ const Menu = styled.div`
     @media screen and (min-width: 768px) {
         display: none;
     }
-`
+`;
 const Nav = styled.div`
     display: none;
     @media screen and (min-width: 768px) {
         display: flex;
     }
-`
+`;
 const NavItem = styled.a`
-    color: ${p => p.theme.colors.N0};
+    color: ${(p) => p.theme.colors.N0};
     background-color: transparent;
     font-weight: 300;
     font-size: 16px;
@@ -66,30 +66,26 @@ const NavItem = styled.a`
     &:last-child {
         margin: 0;
     }
-`
+`;
 const Button = styled.div`
     padding: 12px 24px;
-    background-color: #4FCDCF;
-    color: #1F2443;
+    background-color: #4fcdcf;
+    color: #1f2443;
     border-radius: 4px;
     font-weight: 400;
     font-size: 16px;
-`
+`;
 
 const GlobalHeader = (props) => (
     <Section>
         <Container>
             <NavItem>
                 <Link href="/">
-                    <Logo src='/images/logo.svg'/>
+                    <Logo src="/images/logo.svg" />
                 </Link>
             </NavItem>
             <Nav>
                 <NavItem href="/components">Components</NavItem>
-                <NavItem href="/pricing">Pricing</NavItem>
-                <NavItem href="/login">
-                    <Button>Log in</Button>
-                </NavItem>
             </Nav>
         </Container>
     </Section>
