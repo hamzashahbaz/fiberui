@@ -1,7 +1,5 @@
 # Fiber UI
 
-> A Monorepo with multiple packages and a shared build, test, and release process.
-
 View example ➡️ https://fiberui.com/
 
 -   🐉 [Lerna](https://lernajs.io/)  - The Monorepo manager
